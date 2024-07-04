@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  height: 850px;
+  margin: 0 auto;
+  padding: 0.2rem;
+  text-align: center;
+}
+
+.app {
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #000000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.app h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(to right, #0094fd, #da1bd4); /* Gradient colors */
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+
+
+}
+
+/* Basic styling for the input field */
+input {
+  width: 30%;
+  height: 10%;
+  margin:15px 0;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover and focus states */
+input:hover,
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Disabled state */
+input:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+/* Error state */
+input.error {
+  border-color: #dc3545;
+}
+
+/* Placeholder */
+input::placeholder {
+  color: #999;
+}
+
+/* Clear button inside input */
+input::-webkit-search-cancel-button {
+  display: none; /* Hide the clear button in Safari/Chrome */
+}
+
+/* Autofill styles (Chrome) */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset; /* Change autofill background color */
+}
+
+/* Autofill styles (Firefox) */
+input:-moz-placeholder {
+  color: #999;
+}
+input:-moz-placeholder-shown {
+  color: #999;
+}
+
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  font-weight: bold;
+  color: rgba(98, 90, 134, 0.9); /* White with 90% opacity */
+  background: linear-gradient(to bottom right, rgba(99, 64, 164, 0.3), rgba(125, 230, 197, 0.1)); /* Gradient with transparent white */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border-radius: 100px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.timer span {
+  margin-left: 5px;
+  font-size: 64px;
+}
+
+.timer.running {
+  animation: fade 1s infinite alternate;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+
+
+.app .hours,
+.app .minutes,
+.app .seconds {
+  font-size: 36px;
+  font-weight: bold;
+  color: #cd0808;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .app {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timer {
+    margin-top: 20px;
+  }
+}
+
+/* Styles for the button */
+.custom {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover state */
+.custom:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Focus state */
+.custom:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+/* Active state */
+.custom:active {
+  transform: translateY(1px);
+}
