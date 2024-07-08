@@ -1,13 +1,12 @@
 body {
+  background: #71cad0;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
 }
 
 #root {
-  height: 850px;
-  margin: 0 auto;
-  padding: 0.2rem;
+  margin: 0;
   text-align: center;
 }
 
@@ -17,31 +16,33 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #000000;
+  background-color: #bebee3; /* Replace $color1 with the actual color value */
   border-radius: 10px;
   box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1s ease-in-out;
 }
 
 .app h1 {
-  font-size: 50px;
+  font-size:60px;
   margin-bottom: 10px;
-  background-image: linear-gradient(to right, #0094fd, #da1bd4); /* Gradient colors */
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent; 
+  /* background-image: linear-gradient(
+    to right,
+    #0094fd,
+    #da1bd4
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
   font-weight: 600;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
-
-
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  */
 }
 
 /* Basic styling for the input field */
 input {
   width: 30%;
   height: 10%;
-  margin:15px 0;
+  margin: 15px 0;
   padding: 12px 16px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -91,7 +92,6 @@ input:-moz-placeholder-shown {
   color: #999;
 }
 
-
 .timer {
   display: flex;
   justify-content: center;
@@ -99,7 +99,11 @@ input:-moz-placeholder-shown {
   font-size: 70px;
   font-weight: bold;
   color: rgba(98, 90, 134, 0.9); /* White with 90% opacity */
-  background: linear-gradient(to bottom right, rgba(99, 64, 164, 0.3), rgba(125, 230, 197, 0.1)); /* Gradient with transparent white */
+  background: linear-gradient(
+    to bottom right,
+    rgba(99, 64, 164, 0.3),
+    rgba(125, 230, 197, 0.1)
+  ); /* Gradient with transparent white */
   backdrop-filter: blur(10px); /* Blur effect */
   border-radius: 100px;
   padding: 20px;
@@ -125,8 +129,6 @@ input:-moz-placeholder-shown {
   }
 }
 
-
-
 .app .hours,
 .app .minutes,
 .app .seconds {
@@ -150,7 +152,7 @@ input:-moz-placeholder-shown {
 /* Styles for the button */
 .custom {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 5px 15px;
   font-size: 16px;
   font-weight: bold;
   color: #fff;
@@ -160,7 +162,8 @@ input:-moz-placeholder-shown {
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 /* Hover state */
@@ -178,4 +181,44 @@ input:-moz-placeholder-shown {
 /* Active state */
 .custom:active {
   transform: translateY(1px);
+}
+
+h1 {
+  font-family: "CoreCircus", sans-serif;
+  text-transform: uppercase;
+  font-size: 200px;
+  text-align: center;
+  line-height: 1;
+
+  color: #ffffff; /* Replace $color1 with the actual color value */
+  text-shadow: 1px 0px 0px #1d85cf, 0px 1px 0px #3091d6, 2px 1px 0px #ffffff,
+    1px 2px 0px #06b6ec, 3px 2px 0px #0485bc, 2px 3px 0px #0ab0e2,
+    4px 3px 0px #000000, 3px 4px 0px #333030, 5px 4px 0px #000000,
+    4px 5px 0px #ffffff, 6px 5px 0px #ffffff, 5px 6px 0px #fdf8f8,
+    7px 6px 0px #000000, 6px 7px 0px #000000, 8px 7px 0px #000000,
+    7px 8px 0px #000000, 9px 8px 0px #000000, 8px 9px 0px #000000,
+    10px 9px 0px #22c653, 9px 10px 0px #30bd4a, 11px 10px 0px #2ebd3a,
+    10px 11px 0px #000000;
+  &:before,
+  &:after {
+    content: attr(coutdown);
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+  }
+  &:before {
+    color: #000000; /* Replace $color3 with the actual color value */
+    width: 100%;
+    z-index: 5;
+    font-family: "CoreCircus2DIn";
+    font-weight: normal;
+  }
+  &:after {
+    z-index: -1;
+    text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
+      1px 1px 0 #000000, -3px 3px 2px #6c9d9e, -5px 5px 2px #6c9d9e,
+      -7px 7px 2px #6c9d9e, -8px 8px 2px #6c9d9e, -9px 9px 2px #6c9d9e,
+      -11px 11px 2px #6c9d9e;
+  }
 }
